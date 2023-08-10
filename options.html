@@ -1,11 +1,11 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
     <title>Send-to-Telegram</title>
-    <style type="text/css">
+    <style>
         body {
             background-color: white;
-            padding: 80px;
+            padding: 20px;
             font-family: Helvetica, Arial, Serif;
         }
         input, button, select, option {
@@ -36,40 +36,23 @@
     </style>
 </head>
 <body>
-    <h1>Send-to-Telegram for Google Chrome</h1>
-    <table border="0">
+    <h1>Send-to-STB</h1>
+    <table>
         <tr>
             <td>
             <td id='message'>&nbsp;
-        <!-- <tr>
-            <td>Get yours here:
-            <td><a href="https://pushover.net/" target=_blank>https://pushover.net</a> -->
         <tr>
-            <td>API Key:
-            <td><input id='token' class="input">
+            <td>API&nbsp;Key:
+            <td><input name="token"  id='token' class="input">
         <tr>
-            <td>User ID:
-            <td><input id='userkey' class="input">
+            <td>User&nbsp;ID:
+            <td><input name="userkey" id='userkey' class="input">
         <tr>
-        <!-- <tr>
-            <td>Sound:
-            <td><select id="sounds"></select> -->
         <tr>
             <td>
             <td><button id='save'>Save</button>
-        <!-- <tr>
-            <td>Devices:
-            <td>
-        <tr>
-            <td>- badge:
-            <td id="devices_badge">-
-        <tr>
-            <td>- menu:
-            <td id="devices_menu">-
-        <tr>
-            <td>
-            <td><small>* De-selecting all devices will send notifications to every device!</small> -->
     </table>
-    <script type="text/javascript" src="options.js"></script>
+    <!-- type="module" allows you to use top level await -->
+    <script defer src="options.js" type="module"></script>
 </body>
 </html>

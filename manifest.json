@@ -1,24 +1,30 @@
 {
-  "name": "Send to Telegram for Google Chrome",
-  "version": "0.0.0.2",
-  "description": "Send to Telegram for Google Chrome, with your own key and token.",
-  "browser_action": {
+  "name": "Send to seethebeauty for Google Chrome",
+  "version": "0.0.3.3",
+  "description": "Send to seethebeauty for Google Chrome, with your own key and token.",
+  "action": {
     "default_icon": "tg.png",
     "default_title": "Push this page!"
   },
   "background": {
-    "scripts": ["background.js"]
+    "service_worker": "background.js"
   },
   "icons": {
       "128": "tg.png"
   },
-  "options_page": "options.html",
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": false
+  },
   "permissions": [
-    "tabs", "http://*/*", "https://*/*", "contextMenus"
+    "tabs", "contextMenus", "storage"
+  ],
+  "host_permissions": [
+    "https://seethebeauty.pp.ua/*", "https://api.telegram.org/*"
   ],
   "content_scripts": [{
     "matches": ["http://*/*", "https://*/*"],
     "js": ["content_script.js"]
   }],
-  "manifest_version": 2
+  "manifest_version": 3
 }
